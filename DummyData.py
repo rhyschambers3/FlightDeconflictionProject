@@ -5,10 +5,10 @@ from math import trunc
 This program calculates the poisson distriubtion of arriving to an airport once program starts
 In the end of a prgram we get a list of fake flights that have an estimated time of arrival, distance from airport, and fuel amount
     flights: planes and their data (tuples)
-    Index 0: plane id
-    Index 1: estimated time of arrival  to airpoirt (hours)
-    Index 2: distance from airport (miles)
-    Index 3: fuel level in relation to a start that was randomly calculated above
+        Index 0: plane id
+        Index 1: estimated time of arrival  to airpoirt (hours)
+        Index 2: distance from airport (miles)
+        Index 3: fuel level in relation to a start that was randomly calculated above
 Simulation Parameters: found online for the average numbers 
 """
 
