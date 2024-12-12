@@ -76,5 +76,5 @@ def getFlights(ids, arrivals, distances, fuel):
 flights = getFlights(flight_ids, airportArrivals, airportDistances, fuelLevels)
 
 # can uncomment to get outputs
-for flight in flights:
-    print(f"Flight Number: {flight["plane_id"]}\n    Arriving to airport in {flight["eta_arr"]} hours\n    Distance from airpoirt: {flight["dist"]} miles\n    With fuel a fuel level of: {flight["fuel"]} gallons\n    {flight["plane_id"]}'s fuel level is: {flight["classify"]}")
+# for flight in flights:
+#     print(f"Flight Number: {flight["plane_id"]}\n    Arriving to airport in {flight["eta_arr"]} hours\n    Distance from airpoirt: {flight["dist"]} miles\n    With fuel a fuel level of: {flight["fuel"]} gallons\n    {flight["plane_id"]}'s fuel level is: {flight["classify"]}")
