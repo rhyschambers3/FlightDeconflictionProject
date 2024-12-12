@@ -1,0 +1,500 @@
+Flight Number: FL1
+    Arriving to airport in 0.064 hours
+    Distance from airpoirt: 182.588 miles
+    With fuel a fuel level of: 25504.264 gallons
+    FL1's fuel level is: HIGH
+Flight Number: FL2
+    Arriving to airport in 0.07 hours
+    Distance from airpoirt: 347.147 miles
+    With fuel a fuel level of: 24681.467 gallons
+    FL2's fuel level is: HIGH
+Flight Number: FL3
+    Arriving to airport in 0.087 hours
+    Distance from airpoirt: 426.657 miles
+    With fuel a fuel level of: 24283.917 gallons
+    FL3's fuel level is: HIGH
+Flight Number: FL4
+    Arriving to airport in 0.109 hours
+    Distance from airpoirt: 361.538 miles
+    With fuel a fuel level of: 24609.513 gallons
+    FL4's fuel level is: HIGH
+Flight Number: FL5
+    Arriving to airport in 0.113 hours
+    Distance from airpoirt: 280.436 miles
+    With fuel a fuel level of: 25015.02 gallons
+    FL5's fuel level is: HIGH
+Flight Number: FL6
+    Arriving to airport in 0.123 hours
+    Distance from airpoirt: 180.857 miles
+    With fuel a fuel level of: 25512.916 gallons
+    FL6's fuel level is: HIGH
+Flight Number: FL7
+    Arriving to airport in 0.124 hours
+    Distance from airpoirt: 174.092 miles
+    With fuel a fuel level of: 25546.743 gallons
+    FL7's fuel level is: HIGH
+Flight Number: FL8
+    Arriving to airport in 0.133 hours
+    Distance from airpoirt: 151.277 miles
+    With fuel a fuel level of: 25660.817 gallons
+    FL8's fuel level is: HIGH
+Flight Number: FL9
+    Arriving to airport in 0.154 hours
+    Distance from airpoirt: 416.97 miles
+    With fuel a fuel level of: 24332.354 gallons
+    FL9's fuel level is: HIGH
+Flight Number: FL10
+    Arriving to airport in 0.157 hours
+    Distance from airpoirt: 460.582 miles
+    With fuel a fuel level of: 24114.292 gallons
+    FL10's fuel level is: HIGH
+Flight Number: FL11
+    Arriving to airport in 0.184 hours
+    Distance from airpoirt: 238.435 miles
+    With fuel a fuel level of: 25225.028 gallons
+    FL11's fuel level is: HIGH
+Flight Number: FL12
+    Arriving to airport in 0.196 hours
+    Distance from airpoirt: 251.667 miles
+    With fuel a fuel level of: 25158.868 gallons
+    FL12's fuel level is: HIGH
+Flight Number: FL13
+    Arriving to airport in 0.204 hours
+    Distance from airpoirt: 340.276 miles
+    With fuel a fuel level of: 24715.822 gallons
+    FL13's fuel level is: HIGH
+Flight Number: FL14
+    Arriving to airport in 0.212 hours
+    Distance from airpoirt: 228.332 miles
+    With fuel a fuel level of: 25275.544 gallons
+    FL14's fuel level is: HIGH
+Flight Number: FL15
+    Arriving to airport in 0.234 hours
+    Distance from airpoirt: 434.491 miles
+    With fuel a fuel level of: 24244.747 gallons
+    FL15's fuel level is: HIGH
+Flight Number: FL16
+    Arriving to airport in 0.246 hours
+    Distance from airpoirt: 408.402 miles
+    With fuel a fuel level of: 24375.193 gallons
+    FL16's fuel level is: HIGH
+Flight Number: FL17
+    Arriving to airport in 0.265 hours
+    Distance from airpoirt: 340.119 miles
+    With fuel a fuel level of: 24716.606 gallons
+    FL17's fuel level is: HIGH
+Flight Number: FL18
+    Arriving to airport in 0.3 hours
+    Distance from airpoirt: 324.085 miles
+    With fuel a fuel level of: 24796.775 gallons
+    FL18's fuel level is: HIGH
+Flight Number: FL19
+    Arriving to airport in 0.347 hours
+    Distance from airpoirt: 137.686 miles
+    With fuel a fuel level of: 25728.771 gallons
+    FL19's fuel level is: HIGH
+Flight Number: FL20
+    Arriving to airport in 0.352 hours
+    Distance from airpoirt: 402.007 miles
+    With fuel a fuel level of: 24407.169 gallons
+    FL20's fuel level is: HIGH
+Flight Number: FL21
+    Arriving to airport in 0.373 hours
+    Distance from airpoirt: 353.366 miles
+    With fuel a fuel level of: 24650.374 gallons
+    FL21's fuel level is: HIGH
+Flight Number: FL22
+    Arriving to airport in 0.424 hours
+    Distance from airpoirt: 488.821 miles
+    With fuel a fuel level of: 23973.095 gallons
+    FL22's fuel level is: HIGH
+Flight Number: FL23
+    Arriving to airport in 0.435 hours
+    Distance from airpoirt: 187.881 miles
+    With fuel a fuel level of: 25477.795 gallons
+    FL23's fuel level is: HIGH
+Flight Number: FL24
+    Arriving to airport in 0.436 hours
+    Distance from airpoirt: 302.31 miles
+    With fuel a fuel level of: 24905.653 gallons
+    FL24's fuel level is: HIGH
+Flight Number: FL25
+    Arriving to airport in 0.455 hours
+    Distance from airpoirt: 197.147 miles
+    With fuel a fuel level of: 25431.467 gallons
+    FL25's fuel level is: HIGH
+Flight Number: FL26
+    Arriving to airport in 0.457 hours
+    Distance from airpoirt: 409.349 miles
+    With fuel a fuel level of: 24370.459 gallons
+    FL26's fuel level is: HIGH
+Flight Number: FL27
+    Arriving to airport in 0.466 hours
+    Distance from airpoirt: 193.677 miles
+    With fuel a fuel level of: 25448.815 gallons
+    FL27's fuel level is: HIGH
+Flight Number: FL28
+    Arriving to airport in 0.477 hours
+    Distance from airpoirt: 190.145 miles
+    With fuel a fuel level of: 25466.475 gallons
+    FL28's fuel level is: HIGH
+Flight Number: FL29
+    Arriving to airport in 0.48 hours
+    Distance from airpoirt: 318.194 miles
+    With fuel a fuel level of: 24826.23 gallons
+    FL29's fuel level is: HIGH
+Flight Number: FL30
+    Arriving to airport in 0.484 hours
+    Distance from airpoirt: 163.164 miles
+    With fuel a fuel level of: 25601.381 gallons
+    FL30's fuel level is: HIGH
+Flight Number: FL31
+    Arriving to airport in 0.554 hours
+    Distance from airpoirt: 300.234 miles
+    With fuel a fuel level of: 24916.031 gallons
+    FL31's fuel level is: HIGH
+Flight Number: FL32
+    Arriving to airport in 0.57 hours
+    Distance from airpoirt: 209.602 miles
+    With fuel a fuel level of: 25369.193 gallons
+    FL32's fuel level is: HIGH
+Flight Number: FL33
+    Arriving to airport in 0.577 hours
+    Distance from airpoirt: 154.055 miles
+    With fuel a fuel level of: 25646.925 gallons
+    FL33's fuel level is: HIGH
+Flight Number: FL34
+    Arriving to airport in 0.578 hours
+    Distance from airpoirt: 431.866 miles
+    With fuel a fuel level of: 24257.87 gallons
+    FL34's fuel level is: HIGH
+Flight Number: FL35
+    Arriving to airport in 0.581 hours
+    Distance from airpoirt: 163.693 miles
+    With fuel a fuel level of: 25598.736 gallons
+    FL35's fuel level is: HIGH
+Flight Number: FL36
+    Arriving to airport in 0.581 hours
+    Distance from airpoirt: 153.616 miles
+    With fuel a fuel level of: 25649.124 gallons
+    FL36's fuel level is: HIGH
+Flight Number: FL37
+    Arriving to airport in 0.585 hours
+    Distance from airpoirt: 368.55 miles
+    With fuel a fuel level of: 24574.451 gallons
+    FL37's fuel level is: HIGH
+Flight Number: FL38
+    Arriving to airport in 0.586 hours
+    Distance from airpoirt: 255.199 miles
+    With fuel a fuel level of: 25141.207 gallons
+    FL38's fuel level is: HIGH
+Flight Number: FL39
+    Arriving to airport in 0.593 hours
+    Distance from airpoirt: 291.133 miles
+    With fuel a fuel level of: 24961.538 gallons
+    FL39's fuel level is: HIGH
+Flight Number: FL40
+    Arriving to airport in 0.605 hours
+    Distance from airpoirt: 102.077 miles
+    With fuel a fuel level of: 25906.816 gallons
+    FL40's fuel level is: HIGH
+Flight Number: FL41
+    Arriving to airport in 0.632 hours
+    Distance from airpoirt: 350.534 miles
+    With fuel a fuel level of: 24664.533 gallons
+    FL41's fuel level is: HIGH
+Flight Number: FL42
+    Arriving to airport in 0.645 hours
+    Distance from airpoirt: 485.731 miles
+    With fuel a fuel level of: 23988.548 gallons
+    FL42's fuel level is: HIGH
+Flight Number: FL43
+    Arriving to airport in 0.696 hours
+    Distance from airpoirt: 157.034 miles
+    With fuel a fuel level of: 25632.032 gallons
+    FL43's fuel level is: HIGH
+Flight Number: FL44
+    Arriving to airport in 0.712 hours
+    Distance from airpoirt: 180.904 miles
+    With fuel a fuel level of: 25512.682 gallons
+    FL44's fuel level is: HIGH
+Flight Number: FL45
+    Arriving to airport in 0.712 hours
+    Distance from airpoirt: 483.919 miles
+    With fuel a fuel level of: 23997.606 gallons
+    FL45's fuel level is: HIGH
+Flight Number: FL46
+    Arriving to airport in 0.766 hours
+    Distance from airpoirt: 247.395 miles
+    With fuel a fuel level of: 25180.228 gallons
+    FL46's fuel level is: HIGH
+Flight Number: FL47
+    Arriving to airport in 0.767 hours
+    Distance from airpoirt: 275.965 miles
+    With fuel a fuel level of: 25037.378 gallons
+    FL47's fuel level is: HIGH
+Flight Number: FL48
+    Arriving to airport in 0.773 hours
+    Distance from airpoirt: 229.853 miles
+    With fuel a fuel level of: 25267.935 gallons
+    FL48's fuel level is: HIGH
+Flight Number: FL49
+    Arriving to airport in 0.793 hours
+    Distance from airpoirt: 468.954 miles
+    With fuel a fuel level of: 24072.433 gallons
+    FL49's fuel level is: HIGH
+Flight Number: FL50
+    Arriving to airport in 0.795 hours
+    Distance from airpoirt: 437.964 miles
+    With fuel a fuel level of: 24227.38 gallons
+    FL50's fuel level is: HIGH
+Flight Number: FL51
+    Arriving to airport in 0.798 hours
+    Distance from airpoirt: 403.156 miles
+    With fuel a fuel level of: 24401.42 gallons
+    FL51's fuel level is: HIGH
+Flight Number: FL52
+    Arriving to airport in 0.798 hours
+    Distance from airpoirt: 175.626 miles
+    With fuel a fuel level of: 25539.071 gallons
+    FL52's fuel level is: HIGH
+Flight Number: FL53
+    Arriving to airport in 0.824 hours
+    Distance from airpoirt: 199.241 miles
+    With fuel a fuel level of: 25420.995 gallons
+    FL53's fuel level is: HIGH
+Flight Number: FL54
+    Arriving to airport in 0.825 hours
+    Distance from airpoirt: 484.602 miles
+    With fuel a fuel level of: 23994.19 gallons
+    FL54's fuel level is: HIGH
+Flight Number: FL55
+    Arriving to airport in 0.835 hours
+    Distance from airpoirt: 117.798 miles
+    With fuel a fuel level of: 25828.21 gallons
+    FL55's fuel level is: HIGH
+Flight Number: FL56
+    Arriving to airport in 0.873 hours
+    Distance from airpoirt: 227.127 miles
+    With fuel a fuel level of: 25281.567 gallons
+    FL56's fuel level is: HIGH
+Flight Number: FL57
+    Arriving to airport in 0.878 hours
+    Distance from airpoirt: 160.395 miles
+    With fuel a fuel level of: 25615.225 gallons
+    FL57's fuel level is: HIGH
+Flight Number: FL58
+    Arriving to airport in 0.897 hours
+    Distance from airpoirt: 349.597 miles
+    With fuel a fuel level of: 24669.216 gallons
+    FL58's fuel level is: HIGH
+Flight Number: FL59
+    Arriving to airport in 0.902 hours
+    Distance from airpoirt: 151.271 miles
+    With fuel a fuel level of: 25660.848 gallons
+    FL59's fuel level is: HIGH
+Flight Number: FL60
+    Arriving to airport in 0.921 hours
+    Distance from airpoirt: 251.406 miles
+    With fuel a fuel level of: 25160.174 gallons
+    FL60's fuel level is: HIGH
+Flight Number: FL61
+    Arriving to airport in 0.926 hours
+    Distance from airpoirt: 293.889 miles
+    With fuel a fuel level of: 24947.759 gallons
+    FL61's fuel level is: HIGH
+Flight Number: FL62
+    Arriving to airport in 0.942 hours
+    Distance from airpoirt: 459.493 miles
+    With fuel a fuel level of: 24119.736 gallons
+    FL62's fuel level is: HIGH
+Flight Number: FL63
+    Arriving to airport in 0.952 hours
+    Distance from airpoirt: 431.703 miles
+    With fuel a fuel level of: 24258.689 gallons
+    FL63's fuel level is: HIGH
+Flight Number: FL64
+    Arriving to airport in 0.958 hours
+    Distance from airpoirt: 111.869 miles
+    With fuel a fuel level of: 25857.856 gallons
+    FL64's fuel level is: HIGH
+Flight Number: FL65
+    Arriving to airport in 0.96 hours
+    Distance from airpoirt: 407.094 miles
+    With fuel a fuel level of: 24381.733 gallons
+    FL65's fuel level is: HIGH
+Flight Number: FL66
+    Arriving to airport in 0.967 hours
+    Distance from airpoirt: 220.61 miles
+    With fuel a fuel level of: 25314.151 gallons
+    FL66's fuel level is: HIGH
+Flight Number: FL67
+    Arriving to airport in 0.971 hours
+    Distance from airpoirt: 259.086 miles
+    With fuel a fuel level of: 25121.773 gallons
+    FL67's fuel level is: HIGH
+Flight Number: FL68
+    Arriving to airport in 0.987 hours
+    Distance from airpoirt: 268.311 miles
+    With fuel a fuel level of: 25075.645 gallons
+    FL68's fuel level is: HIGH
+Flight Number: FL69
+    Arriving to airport in 1.011 hours
+    Distance from airpoirt: 471.303 miles
+    With fuel a fuel level of: 24060.687 gallons
+    FL69's fuel level is: HIGH
+Flight Number: FL70
+    Arriving to airport in 1.026 hours
+    Distance from airpoirt: 478.29 miles
+    With fuel a fuel level of: 24025.754 gallons
+    FL70's fuel level is: HIGH
+Flight Number: FL71
+    Arriving to airport in 1.028 hours
+    Distance from airpoirt: 472.176 miles
+    With fuel a fuel level of: 24056.323 gallons
+    FL71's fuel level is: HIGH
+Flight Number: FL72
+    Arriving to airport in 1.029 hours
+    Distance from airpoirt: 271.104 miles
+    With fuel a fuel level of: 25061.681 gallons
+    FL72's fuel level is: HIGH
+Flight Number: FL73
+    Arriving to airport in 1.03 hours
+    Distance from airpoirt: 337.092 miles
+    With fuel a fuel level of: 24731.743 gallons
+    FL73's fuel level is: HIGH
+Flight Number: FL74
+    Arriving to airport in 1.068 hours
+    Distance from airpoirt: 215.753 miles
+    With fuel a fuel level of: 25338.439 gallons
+    FL74's fuel level is: HIGH
+Flight Number: FL75
+    Arriving to airport in 1.069 hours
+    Distance from airpoirt: 411.07 miles
+    With fuel a fuel level of: 24361.852 gallons
+    FL75's fuel level is: HIGH
+Flight Number: FL76
+    Arriving to airport in 1.083 hours
+    Distance from airpoirt: 379.2 miles
+    With fuel a fuel level of: 24521.203 gallons
+    FL76's fuel level is: HIGH
+Flight Number: FL77
+    Arriving to airport in 1.148 hours
+    Distance from airpoirt: 441.952 miles
+    With fuel a fuel level of: 24207.443 gallons
+    FL77's fuel level is: HIGH
+Flight Number: FL78
+    Arriving to airport in 1.161 hours
+    Distance from airpoirt: 391.213 miles
+    With fuel a fuel level of: 24461.139 gallons
+    FL78's fuel level is: HIGH
+Flight Number: FL79
+    Arriving to airport in 1.181 hours
+    Distance from airpoirt: 419.335 miles
+    With fuel a fuel level of: 24320.526 gallons
+    FL79's fuel level is: HIGH
+Flight Number: FL80
+    Arriving to airport in 1.197 hours
+    Distance from airpoirt: 263.737 miles
+    With fuel a fuel level of: 25098.519 gallons
+    FL80's fuel level is: HIGH
+Flight Number: FL81
+    Arriving to airport in 1.201 hours
+    Distance from airpoirt: 166.216 miles
+    With fuel a fuel level of: 25586.123 gallons
+    FL81's fuel level is: HIGH
+Flight Number: FL82
+    Arriving to airport in 1.206 hours
+    Distance from airpoirt: 131.496 miles
+    With fuel a fuel level of: 25759.722 gallons
+    FL82's fuel level is: HIGH
+Flight Number: FL83
+    Arriving to airport in 1.214 hours
+    Distance from airpoirt: 351.55 miles
+    With fuel a fuel level of: 24659.454 gallons
+    FL83's fuel level is: HIGH
+Flight Number: FL84
+    Arriving to airport in 1.216 hours
+    Distance from airpoirt: 438.88 miles
+    With fuel a fuel level of: 24222.802 gallons
+    FL84's fuel level is: HIGH
+Flight Number: FL85
+    Arriving to airport in 1.228 hours
+    Distance from airpoirt: 415.851 miles
+    With fuel a fuel level of: 24337.946 gallons
+    FL85's fuel level is: HIGH
+Flight Number: FL86
+    Arriving to airport in 1.229 hours
+    Distance from airpoirt: 279.133 miles
+    With fuel a fuel level of: 25021.535 gallons
+    FL86's fuel level is: HIGH
+Flight Number: FL87
+    Arriving to airport in 1.23 hours
+    Distance from airpoirt: 212.736 miles
+    With fuel a fuel level of: 25353.521 gallons
+    FL87's fuel level is: HIGH
+Flight Number: FL88
+    Arriving to airport in 1.257 hours
+    Distance from airpoirt: 372.163 miles
+    With fuel a fuel level of: 24556.388 gallons
+    FL88's fuel level is: HIGH
+Flight Number: FL89
+    Arriving to airport in 1.263 hours
+    Distance from airpoirt: 143.983 miles
+    With fuel a fuel level of: 25697.289 gallons
+    FL89's fuel level is: HIGH
+Flight Number: FL90
+    Arriving to airport in 1.273 hours
+    Distance from airpoirt: 264.333 miles
+    With fuel a fuel level of: 25095.538 gallons
+    FL90's fuel level is: HIGH
+Flight Number: FL91
+    Arriving to airport in 1.284 hours
+    Distance from airpoirt: 196.018 miles
+    With fuel a fuel level of: 25437.11 gallons
+    FL91's fuel level is: HIGH
+Flight Number: FL92
+    Arriving to airport in 1.284 hours
+    Distance from airpoirt: 486.927 miles
+    With fuel a fuel level of: 23982.568 gallons
+    FL92's fuel level is: HIGH
+Flight Number: FL93
+    Arriving to airport in 1.3 hours
+    Distance from airpoirt: 330.517 miles
+    With fuel a fuel level of: 24764.615 gallons
+    FL93's fuel level is: HIGH
+Flight Number: FL94
+    Arriving to airport in 1.302 hours
+    Distance from airpoirt: 112.986 miles
+    With fuel a fuel level of: 25852.272 gallons
+    FL94's fuel level is: HIGH
+Flight Number: FL95
+    Arriving to airport in 1.304 hours
+    Distance from airpoirt: 153.823 miles
+    With fuel a fuel level of: 25648.086 gallons
+    FL95's fuel level is: HIGH
+Flight Number: FL96
+    Arriving to airport in 1.355 hours
+    Distance from airpoirt: 495.197 miles
+    With fuel a fuel level of: 23941.216 gallons
+    FL96's fuel level is: HIGH
+Flight Number: FL97
+    Arriving to airport in 1.359 hours
+    Distance from airpoirt: 213.976 miles
+    With fuel a fuel level of: 25347.321 gallons
+    FL97's fuel level is: HIGH
+Flight Number: FL98
+    Arriving to airport in 1.395 hours
+    Distance from airpoirt: 169.038 miles
+    With fuel a fuel level of: 25572.01 gallons
+    FL98's fuel level is: HIGH
+Flight Number: FL99
+    Arriving to airport in 1.431 hours
+    Distance from airpoirt: 275.468 miles
+    With fuel a fuel level of: 25039.86 gallons
+    FL99's fuel level is: HIGH
+Flight Number: FL100
+    Arriving to airport in 1.44 hours
+    Distance from airpoirt: 200.462 miles
+    With fuel a fuel level of: 25414.89 gallons
+    FL100's fuel level is: HIGH
