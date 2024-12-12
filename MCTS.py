@@ -56,11 +56,25 @@ class Node():
             return True
         return False
     
+    def has_parent(self):
+        #Check if the node has a parent node
+        if self.parent is not None:
+            return True
+        return False
+    
     def expand(self):
     # Find all possible planes to land
         if not self.state.is_terminal():
             #For every plane that has not yet landed, create a new node landing that plane 
+            random.shuffle(self.state.planes_to_land)
+            #ASSIGN VALUES BASED ON FUEL AND DISTANCE HERE
+            
             for plane_to_land in self.getActions():
+                for child in self.children:
+                    if child.state.landed:
+                        last_landed = child.state.landed[-1]
+                        if plane_to_land == last_landed:
+                            break
                 newState = AirspaceState(self.state.planes_to_land.copy(), self.state.landed.copy(), self.state.time)
                 newState.planes_to_land.remove(plane_to_land)
                 newState.landed.append(plane_to_land)
@@ -69,7 +83,7 @@ class Node():
                 # Make new child and append
                 childNode = Node(newState, parent=self)
                 self.children.append(childNode)
-                return self.children
+                return [childNode]
         return None
 
 
@@ -98,16 +112,16 @@ class Node():
         return best_child
     
 def simulate(state):
+    total_time = state.time
     while not state.is_terminal():
-            if state.planes_to_land:
-                plane = random.choice(state.planes_to_land)
-                state.planes_to_land.remove(plane)
-                state.landed.append(plane)
-                state.time += 1
+        plane = random.choice(state.planes_to_land)
+        state.planes_to_land.remove(plane)
+        state.landed.append(plane)
+        total_time += 1
             
 
         #MIGHT NEED TO ADJUST THIS BUT SAYIING THAT SHORTER TIME IS BETTER FOR ALL THE PLANES TO LAND
-    return -1*(state.time)
+    return -1*(total_time)
 
 def backpropagate(node, reward):
     #backprop the result of the simulation up the tree, updating the visits and value
@@ -121,23 +135,26 @@ def backpropagate(node, reward):
 def MCTS(root, iterations = 1000):
     for _ in range(iterations):
         node = root
-
         #Select!
         while node.children and node.is_fully_expanded():
-            #Using UCTS to find the best plane to select for landing
             node = node.best_next_plane_to_land()
-            
-            #Expand
-            if not node.is_fully_expanded():
-                newNode = node.expand()
-                if newNode:
-                    node = newNode
-            
-            #Simulate/rollout
-            reward = simulate(node.state)
 
-            #Backprop
-            backpropagate(node, reward)
+        #Expand!
+        if not node.state.is_terminal():
+            new_child = node.expand()
+            if new_child:
+                #pick first child for simulation
+                node = new_child[0] 
+
+        #Simulate/Rollout!
+        reward = simulate(node.state)
+
+        #Backprop!
+        backpropagate(node, reward)
+
+        iterations -=1
+    #Tree built, now find the order of the landings 
+
     landing_order = []
     curNode = root
     while not curNode.state.is_terminal():
