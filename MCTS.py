@@ -4,7 +4,7 @@ from collections import namedtuple
 from operator import itemgetter
 import random
 #flights = getFlights(flight_ids, airportArrivals, airportDistances, fuelLevels)
-        
+ #TODO: simulate and backprop methods & implement a check for conflicting times, locations, or fuel levels       
 
 class AirspaceState:
     #State of the airspace: all of the flight_ids, list of planes landed, and simulation time 
@@ -23,6 +23,7 @@ class AirspaceState:
                 new_planes.append(plane)
         new_landed = self.landed + [action]
         return AirspaceState(new_planes, new_landed, self.time + 1)
+    
 
     #Method to show how each Node as Time: __ Queue of planes: ___ and Planes landed: ___
     def __repr__(self):
@@ -45,7 +46,7 @@ class Node():
         #check that all of the possible actions have been tried
         return len(self.children) >= len(self.getActions())
     
-    def addChild(self):
+    def expand(self):
         #Find all possible planes to land
         possible_landings = self.getActions()
         print("Possible landings = ", possible_landings)
@@ -93,14 +94,34 @@ class Node():
         return best_child
     
 
+    def MCTS(root, iterations = 1000):
+        for i in range(iterations):
+            node = root
+
+            #Select!
+            while node.children and node.is_fully_expanded():
+                #Using UCTS to find the best plane to select for landing
+                node = node.best_next_plane_to_land()
+            
+            #Expand
+            if not node.is_fully_expanded():
+                node = node.expand()
+            
+
+            #Simulate/rollout
+            reward = simulate(node.state)
+
+            #Backprop
+            backpropagate(node, reward)
+
+        return root.best_next_plane_to_land(exploration_weight=0)
+
 
 if __name__ == "__main__":
-
-
     initial_ordering = AirspaceState(flights)
     root = Node(initial_ordering)
     print(root)
-    root.addChild()
+    root.expand()
     for child in root.children:
         print("child state" , child.state)
     print("NEXT BEST PLANE TO LAND = " , root.best_next_plane_to_land().state)
