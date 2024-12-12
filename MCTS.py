@@ -62,14 +62,21 @@ class Node():
             return True
         return False
     
+    def findValue(self, plane):
+        fuel_level = ''
+        if plane. < 2500:
+            fuel_level = 'Low'
+
     def expand(self):
     # Find all possible planes to land
         if not self.state.is_terminal():
             #For every plane that has not yet landed, create a new node landing that plane 
-            random.shuffle(self.state.planes_to_land)
             #ASSIGN VALUES BASED ON FUEL AND DISTANCE HERE
-            
+            random.shuffle(self.state.planes_to_land)
+
             for plane_to_land in self.getActions():
+                #Find most pressing plane to land
+      
                 for child in self.children:
                     if child.state.landed:
                         last_landed = child.state.landed[-1]
