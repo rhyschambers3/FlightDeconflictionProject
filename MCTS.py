@@ -19,7 +19,6 @@ class AirspaceState:
         #Basically, take action to create a new node
         #Select at random a plane to land (but need to update to land most pressing plane)
         plane = random.choice(self.planes_to_land)
-        print("Plane to land = ", plane)
         if (action == ("Land")):
             self.landed.append(plane)
             self.planes_to_land.remove(plane)
@@ -49,31 +48,23 @@ class Node():
 
     def getActions(self):
         #Legal actions are landing one of the planes in the queue 
-        actions = ["Land", "Delay"]
-        return actions
+        return self.state.planes_to_land
     
     def is_fully_expanded(self):
         #check that all of the possible actions have been tried
-        # print()
-        # print("LENGTHHHH: ", len(self.children), "Actions = ", len(self.getActions()))
-        # print()
-        if len(self.children) >= len(self.state.planes_to_land):
+        if len(self.children) == 0:
             return True
         return False
     
     def expand(self):
     # Find all possible planes to land
-        for plane in self.state.planes_to_land:
-            if plane not in [child.state.landed[-1] for child in self.children if child.state.landed]:
-                newState = AirspaceState(
-                    self.state.planes_to_land.copy(),
-                    self.state.landed.copy(),
-                    self.state.time
-                )
-                newState.planes_to_land.remove(plane)
-                newState.landed.append(plane)
+        if not self.state.is_terminal():
+            #For every plane that has not yet landed, create a new node landing that plane 
+            for plane_to_land in self.getActions():
+                newState = AirspaceState(self.state.planes_to_land.copy(), self.state.landed.copy(), self.state.time)
+                newState.planes_to_land.remove(plane_to_land)
+                newState.landed.append(plane_to_land)
                 newState.time += 1
-
 
                 # Make new child and append
                 childNode = Node(newState, parent=self)
@@ -82,7 +73,6 @@ class Node():
         return None
 
 
-   
     
     #Finds the best child node
     def best_next_plane_to_land(self, exploration_weight = 1):
@@ -90,12 +80,10 @@ class Node():
         best_child = None
         max_uct_val = float('-inf')
         self.expand()
-        for child in self.children:
-            print()
-            print("Child in self.children = " , child.state, "At time t =", self.state.time)
-
+        
         #Iterate over children to find all of their UCT scores, 1e-6 prevens division by 0
         for child in self.children:
+            print("CHILD = ", child, "Time = ", self.state.time)
             exploitation = child.value / (child.visits + 1e-6)
             exploration = exploration_weight * math.sqrt(math.log(self.visits + 1) / (child.visits + 1e-6))
             
@@ -106,7 +94,7 @@ class Node():
             if uct > max_uct_val:
                 max_uct_val = uct
                 best_child = child
-        print("BEST CHILD = ", best_child)
+        #print("BEST CHILD = ", best_child)
         return best_child
     
 def simulate(state):
@@ -159,7 +147,7 @@ def MCTS(root, iterations = 1000):
         #since the most recently landed plane will be at the back
         if curNode:
             landing_order.append(curNode.state.landed[-1])
-            print(landing_order)
+         
         else:
             break
         
@@ -169,9 +157,10 @@ def MCTS(root, iterations = 1000):
 if __name__ == "__main__":
     initial_ordering = AirspaceState(flights)
     root = Node(initial_ordering)
-    print(root)
     sequence = MCTS(root, iterations=1000)
+    print()
+    print()
     print("landing sequence = ", sequence)
-   
+    
 
 
