@@ -68,13 +68,4 @@ def getFlights(ids, arrivals, distances, fuel):
     flights = []
     for i in range(numPlanes):
         # getting rid of np.float64() and truncating
-        flights.append({"plane_id": ids[i], "eta_arr": truncate_float(arrivals[i],3), "dist": truncate_float(distances[i],3), "fuel": truncate_float(fuel[i],3), "classify": classify_fuel(truncate_float(fuel[i],3))})
-        # flights.append((ids[i], truncate_float(arrivals[i],3), truncate_float(distances[i],3), truncate_float(fuel[i],3)))
-    return flights
-
-# can take first 20 or so of these to get planes that are arriving soon
-flights = getFlights(flight_ids, airportArrivals, airportDistances, fuelLevels)
-
-# can uncomment to get outputs
-# for flight in flights:
-#     print(f"Flight Number: {flight["plane_id"]}\n    Arriving to airport in {flight["eta_arr"]} hours\n    Distance from airpoirt: {flight["dist"]} miles\n    With fuel a fuel level of: {flight["fuel"]} gallons\n    {flight["plane_id"]}'s fuel level is: {flight["classify"]}")
+        flights.append({"plane_
