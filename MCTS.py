@@ -104,7 +104,7 @@ class Node():
         
         #Iterate over children to find all of their UCT scores, 1e-6 prevens division by 0
         for child in self.children:
-            print("CHILD = ", child, "Time = ", self.state.time)
+            # print("CHILD = ", child, "Time = ", self.state.time)
             exploitation = child.value / (child.visits + 1e-6)
             exploration = exploration_weight * math.sqrt(math.log(self.visits + 1) / (child.visits + 1e-6))
             
@@ -119,7 +119,7 @@ class Node():
         return best_child
     
 def simulate(state):
-    print(state.planes_to_land)
+    # print(state.planes_to_land)
     total_time = state.time
     #the rollout hueristic here will be decided depended on the distance 
     while not state.is_terminal():
@@ -220,8 +220,9 @@ def MCTS(root, iterations = 1000):
 
         #If the node is defined, append in reverse order the landed planes list
         #since the most recently landed plane will be at the back
+        # print(curNode.state.landed[-1]["plane_id"])
         if curNode:
-            landing_order.append(curNode.state.landed[-1])
+            landing_order.append(curNode.state.landed[-1]["plane_id"])
          
         else:
             break
@@ -235,7 +236,7 @@ if __name__ == "__main__":
     sequence = MCTS(root, iterations=1000)
     print()
     print()
-    print("landing sequence = ", sequence)
-    
+    print("Landing sequence = ", sequence)
+    print("Number of planes: ", len(sequence))
 
 
