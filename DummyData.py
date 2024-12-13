@@ -18,7 +18,7 @@ lambdaRate = 70 # our lambda rate is the average number of plane arrivals at LAX
  # want to model 100 planes landing
 numPlanes = 100
 # initial fuel in gallons
-high_threshold = 26417.205  
+high_threshold = 2500  
 #thresholds for determining if fuel is low medium or high)
 low_threshold = high_threshold/3.0
 med_threshold = low_threshold *2.0
@@ -75,6 +75,6 @@ def getFlights(ids, arrivals, distances, fuel):
 # can take first 20 or so of these to get planes that are arriving soon
 flights = getFlights(flight_ids, airportArrivals, airportDistances, fuelLevels)
 
-# can uncomment to get outputs
-# for flight in flights:
-#     print(f"Flight Number: {flight["plane_id"]}\n    Arriving to airport in {flight["eta_arr"]} hours\n    Distance from airpoirt: {flight["dist"]} miles\n    With fuel a fuel level of: {flight["fuel"]} gallons\n    {flight["plane_id"]}'s fuel level is: {flight["classify"]}")
+# # can uncomment to get outputs
+for flight in flights:
+   print(f"{flight['eta_arr']} hours\n    Distance from airport: {flight['dist']} miles\n    With a fuel level of: {flight['fuel']} gallons\n    {flight['plane_id']}'s fuel level is: {flight['classify']}")
