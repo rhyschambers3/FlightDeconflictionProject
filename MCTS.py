@@ -1,5 +1,5 @@
 import math
-from DummyData import flights
+from DummyData import flights, high_threshold, low_threshold, med_threshold
 from collections import namedtuple
 from operator import itemgetter
 import random
@@ -62,10 +62,7 @@ class Node():
             return True
         return False
     
-    def findValue(self, plane):
-        fuel_level = ''
-        if plane. < 2500:
-            fuel_level = 'Low'
+    
 
     def expand(self):
     # Find all possible planes to land
@@ -118,17 +115,35 @@ class Node():
         #print("BEST CHILD = ", best_child)
         return best_child
     
-def simulate(state):
+def simulate(self):
+    state = self.state
     total_time = state.time
-    while not state.is_terminal():
-        plane = random.choice(state.planes_to_land)
-        state.planes_to_land.remove(plane)
-        state.landed.append(plane)
-        total_time += 1
-            
+    landing_planes = state.planes_to_land.copy()
+    landed = state.landed.copy()
 
-        #MIGHT NEED TO ADJUST THIS BUT SAYIING THAT SHORTER TIME IS BETTER FOR ALL THE PLANES TO LAND
-    return -1*(total_time)
+    #simulate landing until terminal
+    reward = 0
+    while landing_planes:
+        #select most urgent plane to land
+        plane = self.select_priority_plane(landing_planes)
+
+        #take action
+        landed.append(plane)
+        landing_planes.remove(plane)
+
+        #inc timestep
+        time +=1
+
+        #update reward depending on the fuel and distance
+        total_reward = self.calculate_reward(plane,time)
+    return total_reward
+def select_priority_plane(self, planes_to_land):
+    return min(planes_to_land, key=lambda plane: plane['fuel'])
+
+def calculate_reward(self, plane, time):
+    time_penalty = abs(time - plane['eta_arr'])*15
+    fuel_penalty = (100000 - plane['fuel'])/1000
+    return -(time_penalty +fuel_penalty)
 
 def backpropagate(node, reward):
     #backprop the result of the simulation up the tree, updating the visits and value
