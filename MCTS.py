@@ -67,6 +67,12 @@ class Node():
         if self.parent is not None:
             return True
         return False
+    
+    def findValue(self, plane):
+        fuel_level = ''
+        if plane.value < 2500: 
+            fuel_level = 'Low'
+
 
     def expand(self):
         # Check that the state isn't a leaf node and is not fully expanded
@@ -190,6 +196,7 @@ def simulate(state):
                 total_reward -= 1000 
 
     return total_reward
+
 
 def backpropagate(node, reward):
     #backprop the result of the simulation up the tree, updating the N and value
