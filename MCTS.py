@@ -64,7 +64,7 @@ class Node():
     
     def findValue(self, plane):
         fuel_level = ''
-        if plane. < 2500:
+        if plane.value < 2500: 
             fuel_level = 'Low'
 
     def expand(self):
@@ -119,14 +119,65 @@ class Node():
         return best_child
     
 def simulate(state):
+    print(state.planes_to_land)
     total_time = state.time
+    #the rollout hueristic here will be decided depended on the distance 
     while not state.is_terminal():
-        plane = random.choice(state.planes_to_land)
-        state.planes_to_land.remove(plane)
-        state.landed.append(plane)
-        total_time += 1
-            
+        #first we want to extract arrival times and fuel levels 
+        arrival_times = list()
+        for plane in state.planes_to_land: 
+            arrival_times.append(plane["eta_arr"])
+        fuel_levels = list()
+        for plane in state.planes_to_land:
+            fuel_levels.append(plane["fuel"])
+        
+        #next we actually have to normalize for the max and min of both 
+        # Compute max/min for normalization
+        if len(arrival_times) > 0:
+            max_arrival = max(arrival_times)
+            min_arrival = min(arrival_times)
+        else:
+            max_arrival = 1.0
+            min_arrival = 0.0
 
+        if len(fuel_levels) > 0:
+            max_fuel = max(fuel_levels)
+            min_fuel = min(fuel_levels)
+        else:
+            max_fuel = 1.0
+            min_fuel = 0.0
+
+        #DUMMY WEIGHTSSS CAN CHANGE 
+        fuel_w = 1.0 #fuel weight make larger if we want to depend more on fuel
+        arr_w = 0.3 #arrival weight
+        
+        best_plane = None
+        best_score = float('inf')
+
+        # Iterate over planes to compute the heuristic to minimize
+        for plane in state.planes_to_land:
+            arrival_time = plane["eta_arr"]
+            fuel_level = plane["fuel"]
+
+            # need to normalizsse bc i read on google that we need to ty genisis
+            normalized_arrival = (arrival_time - min_arrival) / (max_arrival - min_arrival + 1e-9)
+            normalized_fuel = (fuel_level - min_fuel) / (max_fuel - min_fuel + 1e-9)
+
+            # Invert normalized values to match our weights from before
+            urgency_arrival = (1.0 - normalized_arrival)
+            urgency_fuel = (1.0 - normalized_fuel)
+
+            # Combined weighted score
+            score = (arr_w * urgency_arrival) + (fuel_w * urgency_fuel)
+
+            if score < best_score:
+                best_score = score
+                best_plane = plane
+    
+        # plane = random.choice(state.planes_to_land)
+        state.planes_to_land.remove(best_plane)
+        state.landed.append(best_plane)
+        total_time += 1
         #MIGHT NEED TO ADJUST THIS BUT SAYIING THAT SHORTER TIME IS BETTER FOR ALL THE PLANES TO LAND
     return -1*(total_time)
 
