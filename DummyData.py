@@ -18,14 +18,14 @@ lambdaRate = 70 # our lambda rate is the average number of plane arrivals at LAX
  # want to model 100 planes landing
 numPlanes = 100
 # initial fuel in gallons
-high_threshold = 2500  
+high_threshold = 5800  
 #thresholds for determining if fuel is low medium or high)
-low_threshold = high_threshold/3.0
-med_threshold = low_threshold *2.0
+low_threshold = 5500
+med_threshold = 5600
 
 
 # fuel consumption in gallons per mile
-fuelBurnRate = 5 
+fuelBurnRate = 1
 
 # generating arrival times using poisson 
 interArrivals = np.random.exponential(1 / lambdaRate, numPlanes)
@@ -39,8 +39,23 @@ fuelLevels = high_threshold - (airportDistances * fuelBurnRate)
 
 # generating fake flight numbers
 flight_ids = list()
-for i in range(1, len(airportArrivals) + 1):
-    flight_id = f"FL{str(i)}"
+for i in range(1, 25):
+    flight_id = f"AA{str(i)}"
+    flight_ids.append(flight_id) 
+for i in range(25, 50):
+    flight_id = f"JB{str(i)}"
+    flight_ids.append(flight_id) 
+for i in range(50, 60):
+    flight_id = f"AF{str(i)}"
+    flight_ids.append(flight_id) 
+for i in range(60, 75):
+    flight_id = f"DL{str(i)}"
+    flight_ids.append(flight_id) 
+for i in range(75, 80):
+    flight_id = f"SP{str(i)}"
+    flight_ids.append(flight_id) 
+for i in range(80, 100):
+    flight_id = f"AC{str(i)}"
     flight_ids.append(flight_id) 
 
 def truncate_float(num, decimals=3):
@@ -53,12 +68,15 @@ def truncate_float(num, decimals=3):
 
 #to determine if our fuel level is low, med, high WE MAY NOT NEED
 def classify_fuel(fuel_amount): 
-    if fuel_amount < low_threshold:
-        return "LOW"
-    elif fuel_amount < med_threshold:
-        return "MED"
-    else:
+    if fuel_amount > med_threshold:
         return "HIGH"
+    
+    if fuel_amount > low_threshold and fuel_amount < med_threshold:
+        return "MEDIUM"
+    # elif fuel_amount < med_threshold:
+    #     return "LOW"
+    else:
+        return "LOW"
 
 
 def getFlights(ids, arrivals, distances, fuel):
@@ -66,15 +84,15 @@ def getFlights(ids, arrivals, distances, fuel):
     Returns a list of dummy data flights along with their poisson calculations
     """
     flights = []
-    for i in range(numPlanes):
+    for i in range(1,numPlanes-1):
         # getting rid of np.float64() and truncating
-        flights.append({"plane_id": ids[i], "eta_arr": truncate_float(arrivals[i],3), "dist": truncate_float(distances[i],3), "fuel": truncate_float(fuel[i],3), "classify": classify_fuel(truncate_float(fuel[i],3))})
+        flights.append({"id": ids[i], "distance": truncate_float(distances[i],3), "fuel": truncate_float(fuel[i],3), "classify": classify_fuel(truncate_float(fuel[i],3))})
         # flights.append((ids[i], truncate_float(arrivals[i],3), truncate_float(distances[i],3), truncate_float(fuel[i],3)))
     return flights
 
 # can take first 20 or so of these to get planes that are arriving soon
 flights = getFlights(flight_ids, airportArrivals, airportDistances, fuelLevels)
 
-# # can uncomment to get outputs
-for flight in flights:
-   print(f"{flight['eta_arr']} hours\n    Distance from airport: {flight['dist']} miles\n    With a fuel level of: {flight['fuel']} gallons\n    {flight['plane_id']}'s fuel level is: {flight['classify']}")
+# can uncomment to get outputs
+# for flight in flights:
+#    print(f"{flight['id']} hours\n    Distance from airport: {flight['distance']} miles\n    With a fuel level of: {flight['fuel']} gallons\n     fuel level is: {flight['classify']}")
