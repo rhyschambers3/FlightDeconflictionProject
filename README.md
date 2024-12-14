@@ -1,5 +1,6 @@
 # Liza-Rhys-Talia-AI-Project
 Report
+
 Software and hardware requirements
 **Imports needed:** 
 Numpy
