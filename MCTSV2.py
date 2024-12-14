@@ -27,48 +27,35 @@ def transition(state, action):
         if plane["id"] != plane_to_land["id"]:
             # print("Plane fuel: " , plane["fuel"])
             #The next time we need to land a plane, we should have less fuel than we have now
-            plane["fuel"] -= 0.1
+            #state that's changing
+            plane["fuel"] -= 0.001
+
+            #In theory, could be random if there's weather or delays in flight 
+            plane["distance"] -=.001
             new_planes.append(plane)
     #Return the new state S' = transition(state, action)
-    return {"planes": new_planes, "landed_planes": state["landed_planes"] + [{"plane": plane_to_land, "time": state["time"] + 1}],"time": state["time"] + 1}
-
+    return {"planes": new_planes, "landed_planes": state["landed_planes"] + [{"plane": plane_to_land, "time": state ["time"] + 1}],"time": state["time"] + 1}
 
 def reward(state):
-    fuel_check = False
     for plane in state["planes"]:
         if plane["fuel"] < 0:
-            fuel_check = True
-            break
-    if fuel_check:
-        return -1000
+            return -1000 # CRASH OH NOOOOOOOOOO
     if not state["planes"]:
-        return 1000
+        return 1000 #terminal state! So there are no more planes to land 
     distance_penalty = 0
     for plane in state["planes"]:
         #Adding distance to distance penalty (which is bad in reality)
         distance_penalty += plane["distance"]
+    # distance_penalty = distance_penalty/len(state["planes"])
     fuel_penalty = 0
     for plane in state["planes"]:
-        fuel_penalty += max(0, 10000 - plane["fuel"])
+        fuel_penalty += max(0, 1000 - plane["fuel"])
+    # fuel_penalty = fuel_penalty / len(state["planes"])
     
-
+    #less urgency for distance 
     #Less negative (higher value) = land first
     return -distance_penalty - fuel_penalty
-
-# def reward(state):
-#     fuel_check = False
-#     for plane in state["planes"]:
-#         if plane["fuel"] < 0:
-#             fuel_check = True
-#             break
-#     if fuel_check:
-#         return -1000
-#     if not state["planes"]:
-#         return 1000
-#     fuel_penalty = 0
-#     for plane in state["planes"]:
-#         fuel_penalty += max(0, 10000 - plane["fuel"])
-#     return  fuel_penalty
+    # return -distance_penalty
 
 
 
@@ -76,18 +63,24 @@ def select_action(state):
     best_plane = random.choice(state["planes"])
     # print("Best plane: ", best_plane)
     for plane in state["planes"]:
-        if plane["fuel"] < best_plane["fuel"] or (plane["fuel"] == best_plane["fuel"] and plane["distance"] < best_plane["distance"]):
+        if plane["fuel"] < best_plane["fuel"] or ((plane["fuel"] == best_plane["fuel"] and plane["distance"] < best_plane["distance"])):
             best_plane = plane
+        # if plane["distance"] < best_plane["distance"]:
+        #     best_plane = plane
     return best_plane
 
 
-def simulate(state):
+def rollout(state):
+
+    #while we have planes to land (terminal state= all planes landed, or state["planes"] = False)
     while state["planes"]:
+        # finds the best action for our state
         action = select_action(state)
         state = transition(state, action)
         for plane in state["planes"]:
             if plane["fuel"] < 0:
                 return reward(state)
+
     return reward(state)
 
 
@@ -133,15 +126,22 @@ def expand(node):
         for plane in node.state["planes"]:
             if plane["fuel"] < best_plane["fuel"] or (plane["fuel"] == best_plane["fuel"] and plane["distance"] < best_plane["distance"]):
                 best_plane = plane
+            # if plane["distance"] < best_plane["distance"]:
+            #     best_plane = plane
         #Found either closest plane or lowest fuel 
         action = best_plane
 
         #Find the next state after landing the current plane (take action)
         new_state = transition(node.state, action)
+        #Just adding one node here because selected the best plane to land 
         child_node = Node(new_state, parent=node, action=action)
+        # print("Length of node's children before appending: ", len(node.children))
         node.children.append(child_node)
-        print()
+        # print("Length of Node's children after appending: ", len(node.children))
+
+        #Update the planes that we've landed
         node.tried_actions.add(action["id"])
+        #Returning the node of the state of the best plane to land (expansion of curnode)
         return child_node
     return None
 
@@ -150,7 +150,7 @@ def backpropagate(node, reward_value):
     while node:
         node.visits += 1
         node.reward += reward_value
-        node = node.parent
+        node =node.parent
 
 
 def mcts(initial_state, iterations):
@@ -166,11 +166,12 @@ def mcts(initial_state, iterations):
             # print("Length of node.children after expansion: " , len(node.children))
         else:
             child = node
-        reward_value = simulate(child.state)
+        reward_value = rollout(child.state)
+
         backpropagate(child, reward_value)
     best_child = root.children[0]
     for child in root.children:
-        if child.visits > best_child.visits:
+        if child.reward > best_child.reward:
             best_child = child
     return best_child.action
 
@@ -185,25 +186,22 @@ def main():
         "time": 0,
     }
 
-    print("Initial state:", initial_state)
+    # print("Initial state:", initial_state)
 
-
-    while initial_state["planes"]:
+    while initial_state["planes"]: #"timestep" that updates
         # print("Initial state of planes at start of each iteration: ", len(initial_state["planes"]))
-
         #Best action is the plane we need to land in this "timestep", where timestep relates to the number of planes we need to land 
-        best_action = mcts(initial_state, iterations=10)
+        best_action = mcts(initial_state, iterations=100)
         # print("Best action to take: ", best_action)
         print(f"Landing plane: {best_action} at time {initial_state['time'] + 1}")
         initial_state = transition(initial_state, best_action)
 
     print("All planes have landed.")
-    for landed in initial_state["landed_planes"]:
-        print(f"Plane {landed['plane']['id']} landed at time {landed['time']}")
-
 
 if __name__ == "__main__":
     main()
+
+
 
 
 
