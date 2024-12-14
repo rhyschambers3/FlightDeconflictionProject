@@ -35,11 +35,11 @@ By using a transition function, we then iterated to our next state based on the 
 ### **How You Measured Your Success (or Failure)**
 
 - Run the command `python MCTS.py`.  
-- The output measures the success of our algorithm.  
+- The output shows the plane that lands at each timestep and the fuel level/distance at this timestep.
 - We could then measure success by printing out the fuel and distance levels of the plane landed at each time step and making sure they were trending in the correct direction. (The correct direction being lower fuel levels and lower distances).
 
 ### Shortcomings
-- We REALLY attempted to take distance into account for our reward, but we could not figure it out. We use the distance to calculate the next transition, but we are still prioritizing the lowest fuel levels for landing. 
+- We REALLY attempted to take distance into account for our reward, but we could not figure it out. We use the distance to calculate the next transition, but we are still prioritizing the lowest fuel levels for landing. If we were to improve our algorithm we would make sure that, there should be a little bit of a mix between low and medium fueled planes landing toward the beginning, as opposed to just the low fueled planes.
   
 
 
