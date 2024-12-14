@@ -3,7 +3,7 @@
 **Liza Mozolyuk, Talia Novack, Rhys Chambers**
 ## Instructions
 1. Install requirements in  `requirements.txt`
-2. Run the command `python MCTSV2.py`
+2. Run the command `python MCTS.py`
 ## Report
 ### **Software and Hardware Requirements**
 
@@ -34,7 +34,7 @@ By using a transition function, we then iterated to our next state based on the 
 
 ### **How You Measured Your Success (or Failure)**
 
-- Run the command `python MCTSV2.py`.  
+- Run the command `python MCTS.py`.  
 - The output measures the success of our algorithm.  
 - We could then measure success by printing out the fuel and distance levels of the plane landed at each time step and making sure they were trending in the correct direction. (The correct direction being lower fuel levels and lower distances).
 
