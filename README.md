@@ -1,12 +1,12 @@
-# Flight-Deconfliction using Monte Carlo Tree Search**
+# Flight-Deconfliction with Monte Carlo Tree Search
 
 **Liza Mozolyuk, Talia Novack, Rhys Chambers**
 
 **Software and Hardware Requirements**
 
 - **Imports needed:**  
-  Numpy  
-  Python 3.10.7 or higher  
+  - Numpy  
+  - Python 3.10.7 or higher  
 
 **Links to Any Data Sources**
 
