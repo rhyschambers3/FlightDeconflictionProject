@@ -1,4 +1,5 @@
-#Flight-Deconfliction using Monte Carlo Tree Search
+# Flight-Deconfliction using Monte Carlo Tree Search**
+
 **Liza Mozolyuk, Talia Novack, Rhys Chambers**
 
 **Software and Hardware Requirements**
