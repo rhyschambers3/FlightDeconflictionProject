@@ -39,7 +39,7 @@ By using a transition function, we then iterated to our next state based on the 
 - We could then measure success by printing out the fuel and distance levels of the plane landed at each time step and making sure they were trending in the correct direction. (The correct direction being lower fuel levels and lower distances).
 
 ### Shortcomings
-- We REALLY attempted to take distance into account for our reward, but we could not figure it out. We use the distance to calculate the next transition, but for some reason, that does not work.
+- We REALLY attempted to take distance into account for our reward, but we could not figure it out. We use the distance to calculate the next transition, but we are still prioritizing the lowest fuel levels for landing. 
   
 
 
